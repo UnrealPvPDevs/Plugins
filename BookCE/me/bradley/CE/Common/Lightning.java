@@ -26,6 +26,7 @@ public class Lightning implements Listener{
 				Player shooter = (Player) arrow.getShooter();
 				if(e.getEntity() instanceof Player){
 					Player hit = (Player) e.getEntity();
+					if(e.isCancelled()){ return; }
 			if(shooter.getItemInHand().getItemMeta().getLore().contains(ChatColor.WHITE + "" + ChatColor.BOLD + "Lightning I")){
 				Random rand = new Random();
 				int chance = rand.nextInt(5)+1;

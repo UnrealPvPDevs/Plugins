@@ -25,6 +25,7 @@ public class Stormcaller implements Listener{
 				int chance = rand.nextInt(5)+1;
 				Player hit = (Player) e.getEntity();
 				Player attacker = (Player) e.getDamager();
+				if(e.isCancelled()){ return; }
 				if(attacker.getInventory().getLeggings().getItemMeta().getLore().contains("§f§lStormcaller I")){
 					if(chance == 1){
 					Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lightning " + hit.getName());

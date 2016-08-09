@@ -20,6 +20,7 @@ public class Trolling implements Listener{
 	public void applyEffect(EntityDamageByEntityEvent e) {
 		if(e.getDamager() instanceof Player){
 		Player damager = (Player) e.getDamager();
+		if(e.isCancelled()){ return; }
 		if(damager.getItemInHand().getType()==Material.DIAMOND_SWORD && damager.getItemInHand().getItemMeta().getLore().contains(ChatColor.WHITE + "" + ChatColor.BOLD + "Trolling I")){
 			if(e.getEntity() instanceof Player){
 				Player p = (Player) e.getEntity();
