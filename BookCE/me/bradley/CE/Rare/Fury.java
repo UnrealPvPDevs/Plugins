@@ -34,7 +34,7 @@ public class Fury implements Listener{
 				Random rand = new Random();
 				int chance = rand.nextInt(10)+1;
 				if(chance == 5){
-					hit.setFireTicks(5);
+					hit.setFireTicks(20);
 					hit.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 2));
 					for(Player online : Bukkit.getOnlinePlayers()){
 						online.playEffect(hit.getLocation(), Effect.MOBSPAWNER_FLAMES, 10);
@@ -45,8 +45,8 @@ public class Fury implements Listener{
 				Random rand = new Random();
 				int chance = rand.nextInt(5)+1;
 				if(chance == 3){
-					hit.setFireTicks(10);
-					hit.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 4));
+					hit.setFireTicks(40);
+					hit.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 80, 4));
 					for(Player online : Bukkit.getOnlinePlayers()){
 						online.playEffect(hit.getLocation(), Effect.MOBSPAWNER_FLAMES, 10);
 					}
