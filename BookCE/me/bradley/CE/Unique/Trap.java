@@ -22,6 +22,7 @@ public class Trap implements Listener{
 		if(e.getEntity() instanceof Player){
 			Player target = (Player) e.getEntity();
 			Player pu = (Player) e.getDamager();
+			if(e.isCancelled()){ return; }
 		if(pu.getItemInHand()!=null && pu.getItemInHand().getType()==Material.DIAMOND_SWORD && pu.getItemInHand().getItemMeta().getLore().contains(ChatColor.GREEN + "" + ChatColor.BOLD + "Trap I")){
 			target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10, 5));
 			return;

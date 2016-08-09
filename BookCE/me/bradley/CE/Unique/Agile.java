@@ -21,6 +21,7 @@ public class Agile implements Listener{
 	public void onClick(InventoryClickEvent e){
 		Player player = (Player) e.getWhoClicked();
 		if(e.getCurrentItem().getType()==Material.DIAMOND_SWORD){
+			if(e.isCancelled()){ return; }
 				if(player.getItemOnCursor()!=null && player.getItemOnCursor().getType()==Material.BOOK && player.getItemOnCursor().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "" + ChatColor.BOLD + "Agile I")){
 					if(e.getCurrentItem().getItemMeta().hasLore() && !(e.getCurrentItem().getItemMeta().getLore().contains("§a§lAgile I")
 							&& e.getCurrentItem().getItemMeta().getLore().contains("§a§lAgile II")

@@ -30,9 +30,9 @@ public class Speed implements Listener{
 		}else if(e.getNewArmorPiece()!=null && e.getNewArmorPiece().getItemMeta().getLore().contains("§a§lSpeed III")){
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 999999, 2));
 			return;
-		}else if(e.getOldArmorPiece()!=null && e.getOldArmorPiece().getItemMeta().getLore().contains("§f§lSpeed I")
-				|| e.getOldArmorPiece()!=null && e.getOldArmorPiece().getItemMeta().getLore().contains("§f§lSpeed II")
-				|| e.getOldArmorPiece()!=null && e.getOldArmorPiece().getItemMeta().getLore().contains("§f§lSpeed III")){
+		}else if(e.getOldArmorPiece()!=null && e.getOldArmorPiece().getItemMeta().getLore().contains("§a§lSpeed I")
+				|| e.getOldArmorPiece()!=null && e.getOldArmorPiece().getItemMeta().getLore().contains("§a§lSpeed II")
+				|| e.getOldArmorPiece()!=null && e.getOldArmorPiece().getItemMeta().getLore().contains("§a§lSpeed III")){
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 0, 0), true);
 			return;
 		}
